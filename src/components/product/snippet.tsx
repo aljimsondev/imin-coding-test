@@ -13,7 +13,7 @@ function ProductSnippet() {
   const products = getProducts();
 
   return (
-    <section className="container">
+    <section className="snippet container ">
       <div>
         <Typography component="h3" variant="h3" className="uppercase">
           Product

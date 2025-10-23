@@ -1,8 +1,14 @@
+.snippet {
+  position: relative;
+  padding: 3rem 0;
+}
+
 .products-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
   gap: var(--product-spacing);
+  margin-top: 2em;
 }
 
 @media (max-width: 768px) {
