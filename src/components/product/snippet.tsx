@@ -33,12 +33,6 @@ function ProductSnippet() {
           <Button variant="outline">
             <IoChevronDown /> Sort By
           </Button>
-          <Button variant="destructive">
-            <IoChevronDown /> Sort By
-          </Button>
-          <Button variant="default">
-            <IoChevronDown /> Sort By
-          </Button>
         </div>
       </div>
       <div className="products-wrapper">
