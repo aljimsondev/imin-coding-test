@@ -16,7 +16,7 @@ function ProductSnippet() {
 
   return (
     <section className="snippet container ">
-      <div className="header">
+      <div className="snippet-header">
         <div className="title-wrapper">
           <Typography component="h3" variant="h2" className="uppercase">
             Product

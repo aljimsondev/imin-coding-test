@@ -63,7 +63,7 @@ function ProductCard({ product }: ProductProps) {
             <Icon imageSrc="/assets/icons/stack.png" />
           </div>
         </div>
-        <div className="footer">
+        <div className="card-footer">
           {isNew && <Badge title="New" theme="accent-rose" />}
           {hasDiscount && (
             <Badge title={`Sale ${discount}%`} theme="accent-red" />

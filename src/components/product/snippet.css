@@ -2,7 +2,7 @@
   position: relative;
   padding: 3rem 0;
 
-  & .header {
+  & .snippet-header {
     display: flex;
     flex-direction: row;
     position: relative;

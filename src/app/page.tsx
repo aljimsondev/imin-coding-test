@@ -4,7 +4,7 @@ import ProductSnippet from '@/components/product/snippet';
 
 export default function Home() {
   return (
-    <main>
+    <main className="main">
       <Header />
       <ProductSnippet />
       <Footer />
