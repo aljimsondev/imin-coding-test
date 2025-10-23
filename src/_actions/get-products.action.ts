@@ -20,8 +20,12 @@ export async function getProducts({
     sortOrder: SortOrder,
   ) {
     return sortOrder === 'asc'
-      ? productA.product_name.localeCompare(productB.product_name) // A-Z
-      : productB.product_name.localeCompare(productA.product_name); // Z-A
+      ? productA.product_name
+          .toLowerCase()
+          .localeCompare(productB.product_name.toLowerCase()) // A-Z
+      : productB.product_name
+          .toLowerCase()
+          .localeCompare(productA.product_name.toLowerCase()); // Z-A
   }
 
   // apply price filter
