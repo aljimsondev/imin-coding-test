@@ -1,0 +1,44 @@
+.color-selector-wrapper {
+  position: relative;
+  border-radius: var(--radius-full);
+  outline: none;
+  border: 1px solid transparent;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+.active-selector {
+  border-color: var(--primary);
+}
+
+.color-selector {
+  aspect-ratio: 1/1;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 300ms;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.color-selector-active {
+  border: 1px solid var(--primary);
+}
+
+.selector-base {
+  height: 32px;
+}
+
+.selector-sm {
+  height: 28px;
+}
+
+.selector-lg {
+  height: 36px;
+}

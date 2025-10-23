@@ -9,6 +9,7 @@ const iconButtonVariants = cva('icon-button', {
     variant: {
       default: 'icon-button-primary',
       'accent-red': 'icon-button-accent-red',
+      ghost: 'icon-button-ghost',
     },
     size: {
       default: 'icon-button-base',
@@ -33,7 +34,7 @@ function IconButton({
 }: React.ComponentProps<'button'> &
   VariantProps<typeof iconButtonVariants> & {
     icon: IconType;
-    iconProps: IconBaseProps;
+    iconProps?: IconBaseProps;
   }) {
   return (
     <button

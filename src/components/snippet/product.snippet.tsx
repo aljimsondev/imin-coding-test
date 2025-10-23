@@ -12,11 +12,15 @@ import { VscSettings } from 'react-icons/vsc';
 import './product.snippet.css';
 
 function ProductSnippet() {
-  const { sortOrder, sortBy } = useFilterStore();
+  const { sortOrder, sortBy, setOpenFilterMenu } = useFilterStore();
   const { data: products = [] } = useQuery({
     queryFn: () => getProducts({ sortOrder: sortOrder, sortBy }),
     queryKey: [sortOrder, sortBy],
   });
+
+  const handleOpenFilterMenu = () => {
+    setOpenFilterMenu(true);
+  };
 
   return (
     <section className="snippet container ">
@@ -30,8 +34,8 @@ function ProductSnippet() {
           </Typography>
         </div>
         <div className="filter">
-          <Button variant="outline">
-            <VscSettings className="text- " />
+          <Button variant="outline" onClick={handleOpenFilterMenu}>
+            <VscSettings />
             Filter
           </Button>
           <FilterMenu />

@@ -1,0 +1,16 @@
+.input {
+  width: 100%;
+  position: relative;
+  background: var(--background);
+  border: 1px solid;
+  height: 36px;
+  color: var(--text-primary);
+  padding: 0 8px;
+  border-radius: var(--radius-md);
+  border-color: var(--border);
+
+  &:focus {
+    border-color: var(--accent-red);
+    outline: var(--accent-red);
+  }
+}

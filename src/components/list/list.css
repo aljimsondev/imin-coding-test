@@ -1,0 +1,14 @@
+.list-group {
+  position: relative;
+}
+
+.list-group-title {
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: var(--text-base);
+}
+
+.list-group-content {
+  margin-top: 0.75em;
+}

@@ -23,6 +23,10 @@
 .icon-button-accent-red {
   color: var(--accent-red);
 }
+.icon-button-ghost {
+  color: var(--primary);
+  border: transparent;
+}
 
 /* SIZES */
 
