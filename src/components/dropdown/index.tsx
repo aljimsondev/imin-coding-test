@@ -1,7 +1,8 @@
-import { Dispatch, ReactNode, SetStateAction } from 'react';
+import cn from 'classnames';
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
 import './dropdown.css';
 
-interface DropdownProps {
+interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   trigger: ReactNode;
   children: ReactNode;
   align?: 'left' | 'right';
@@ -15,24 +16,35 @@ function Dropdown({
   onOpenChange,
   children,
   align = 'left',
+  className,
+  ...rest
 }: DropdownProps) {
   return (
-    <div className="dropdown">
+    <div className={cn('dropdown', className)} {...rest}>
       <div onClick={() => onOpenChange((prev) => !prev)}>{trigger}</div>
       {open && <div className={`dropdown-content ${align}`}>{children}</div>}
     </div>
   );
 }
 
-interface DropdownItemProps {
+interface DropdownItemProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   onClick?: () => void;
 }
 
-function DropdownItem({ children, onClick }: DropdownItemProps) {
+function DropdownItem({
+  children,
+  onClick,
+  className,
+  ...rest
+}: DropdownItemProps) {
   return (
     <>
-      <div className="dropdown-item" onClick={onClick}>
+      <div
+        className={cn('dropdown-item', className)}
+        onClick={onClick}
+        {...rest}
+      >
         {children}
       </div>
     </>
@@ -43,14 +55,19 @@ function DropdownDivider() {
   return <div className="dropdown-divider" />;
 }
 
-interface DropdownSectionProps {
+interface DropdownSectionProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   children: ReactNode;
 }
 
-function DropdownSection({ title, children }: DropdownSectionProps) {
+function DropdownSection({
+  title,
+  children,
+  className,
+  ...rest
+}: DropdownSectionProps) {
   return (
-    <div className="dropdown-section">
+    <div className={cn('dropdown-section', className)} {...rest}>
       <div className="section-title">{title}</div>
       {children}
     </div>

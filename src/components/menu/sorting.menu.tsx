@@ -8,14 +8,18 @@ import {
 import { useFilterStore } from '@/store/filter.store';
 import { SortOrder } from '@/types/product.type';
 import { IoChevronDown } from 'react-icons/io5';
+import { MdOutlineCheck } from 'react-icons/md';
 
 function SortingMenu() {
-  const { setSortOrder, openSortMenu, setOpenSortMenu } = useFilterStore();
+  const { setSortOrder, openSortMenu, setOpenSortMenu, sortOrder } =
+    useFilterStore();
 
   // update sort order
   const handleNameSortOrder = (sortOrder: SortOrder) => {
     setSortOrder(sortOrder);
+    setOpenSortMenu(false); // close the menu when selecting the menu item
   };
+
   return (
     <Dropdown
       open={openSortMenu}
@@ -28,11 +32,17 @@ function SortingMenu() {
       }
     >
       <DropdownSection title="Alphabetically">
-        <DropdownItem onClick={() => handleNameSortOrder('asc')}>
-          A-Z
+        <DropdownItem
+          className="flex items-center justify-between"
+          onClick={() => handleNameSortOrder('asc')}
+        >
+          A-Z {sortOrder === 'asc' && <MdOutlineCheck size={24} />}
         </DropdownItem>
-        <DropdownItem onClick={() => handleNameSortOrder('desc')}>
-          Z-A
+        <DropdownItem
+          className="flex items-center justify-between"
+          onClick={() => handleNameSortOrder('desc')}
+        >
+          Z-A {sortOrder === 'desc' && <MdOutlineCheck size={24} />}
         </DropdownItem>
       </DropdownSection>
       <DropdownDivider />

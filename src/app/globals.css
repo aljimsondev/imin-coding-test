@@ -1,7 +1,7 @@
 /*CSS IMPORTS*/
 @import url('../styles/container.css');
-@import url('../styles/product-card.css');
 @import url('../styles/typography.css');
+@import url('../styles/flex.css');
 
 :root {
   --background: #ffffff;
