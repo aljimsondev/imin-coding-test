@@ -1,3 +1,4 @@
+import Button from '@/components/button';
 import ColorSelector from '@/components/button/color-sector';
 import IconButton from '@/components/button/icon.button';
 import MaterialFilter from '@/components/filters/material-filter';
@@ -45,6 +46,7 @@ function FilterMenu() {
             icon={MdOutlineClose}
             iconProps={{ size: 24 }}
             variant="ghost"
+            onClick={() => setOpenFilterMenu(false)}
           />
         </div>
         <Separator />
@@ -78,6 +80,16 @@ function FilterMenu() {
           <ListGroup title="Product Care">
             <ProductCareFilter options={productCare} />
           </ListGroup>
+        </div>
+        <Separator />
+        <div className="filter-menu-footer">
+          <Button
+            variant="destructive"
+            size="lg"
+            className="apply_filter_button"
+          >
+            Apply
+          </Button>
         </div>
       </aside>
     </Portal>

@@ -30,3 +30,19 @@
   overflow: auto;
   padding: 16px 32px;
 }
+
+.filter-menu-footer {
+  padding: 16px 32px;
+  width: 100%;
+  position: relative;
+
+  & .apply_filter_button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    width: 100%;
+  }
+}
