@@ -10,6 +10,7 @@ import Image from 'next/image';
 import './product.card.css';
 
 import { Product } from '@/types/product.type';
+import { FiPlus } from 'react-icons/fi';
 import { GoHeart } from 'react-icons/go';
 import { RiStackLine } from 'react-icons/ri';
 
@@ -39,12 +40,19 @@ function ProductCard({ product }: ProductProps) {
     <div className="product-card">
       <div className="image-wrapper">
         <Image src={`/assets/${product.product_img}`} fill alt="img" />
+        <IconButton
+          icon={FiPlus}
+          iconProps={{ size: 24 }}
+          className="product-action-button"
+        />
       </div>
       <div className="product-content">
         <Typography variant="h5">{product.product_name}</Typography>
-        <Typography variant="small" className="text-muted">
-          {constructProductColorsAvailable(product.skus)}
-        </Typography>
+        <div>
+          <Typography variant="small" className="text-muted">
+            {constructProductColorsAvailable(product.skus)}
+          </Typography>
+        </div>
         <div className="price-wrapper ">
           <div className="prices">
             <Typography

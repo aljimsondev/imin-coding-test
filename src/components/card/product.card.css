@@ -1,11 +1,29 @@
 .product-card {
   position: relative;
   width: 100%;
+  cursor: pointer;
 
   & .image-wrapper {
     aspect-ratio: 1/1;
     width: 100%;
     position: relative;
+
+    & .product-action-button {
+      background: var(--background);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 12px;
+      display: none;
+
+      &:hover {
+        background: var(--muted-foreground);
+      }
+    }
+  }
+  /* SHOW THE ACTION BUTTON WHEN THE CARD IS HOVERED*/
+  &:hover .image-wrapper .product-action-button {
+    display: flex;
   }
 
   & .product-content {
