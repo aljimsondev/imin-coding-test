@@ -1,0 +1,52 @@
+/* Typography Sizes */
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: 22px;
+}
+
+.text-base {
+  font-size: var(--text-base);
+  line-height: 150%;
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: 140%;
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: 130%;
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: 125%;
+}
+
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: 120%;
+}
+
+.text-4xl {
+  font-size: var(--text-4xl);
+  line-height: 115%;
+}
+
+/* Font Weights */
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
