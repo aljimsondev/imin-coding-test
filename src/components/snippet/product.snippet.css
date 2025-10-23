@@ -35,6 +35,13 @@
     margin-top: 2em;
     padding: var(--padding);
   }
+
+  & .product-snippet-pagination-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 540px) {
