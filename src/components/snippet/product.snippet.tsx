@@ -1,12 +1,13 @@
 'use client';
 
 import Button from '@/components/button';
-import ProductCard from '@/components/product/card/product.card';
+import ProductCard from '@/components/card/product.card';
 import Typography from '@/components/typography';
 import products from '@/temp/products.json';
 import { IoChevronDown } from 'react-icons/io5';
 import { VscSettings } from 'react-icons/vsc';
-import './snippet.css';
+import './product.snippet.css';
+
 function getProducts() {
   return products;
 }
