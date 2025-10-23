@@ -12,10 +12,10 @@ import { VscSettings } from 'react-icons/vsc';
 import './product.snippet.css';
 
 function ProductSnippet() {
-  const { sortOrder } = useFilterStore();
+  const { sortOrder, sortBy } = useFilterStore();
   const { data: products = [] } = useQuery({
-    queryFn: () => getProducts({ sortOrder: sortOrder }),
-    queryKey: [sortOrder],
+    queryFn: () => getProducts({ sortOrder: sortOrder, sortBy }),
+    queryKey: [sortOrder, sortBy],
   });
 
   return (

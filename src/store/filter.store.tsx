@@ -1,6 +1,6 @@
 'use client';
 
-import { SortOrder } from '@/types/product.type';
+import { SortBy, SortOrder } from '@/types/product.type';
 import {
   createContext,
   Dispatch,
@@ -13,16 +13,24 @@ import {
 interface FilterStoreState {
   openSortMenu: boolean;
   setOpenSortMenu: Dispatch<SetStateAction<boolean>>;
+
   // filter menu state
   openFilterMenu: boolean;
   setOpenFilterMenu: Dispatch<SetStateAction<boolean>>;
 
+  // sort target state
+  sortBy: SortBy;
+  setSortBy: Dispatch<SetStateAction<SortBy>>;
+
+  // sort order state
   sortOrder: SortOrder;
+  setSortOrder: (sortOrder: SortOrder) => void;
+
   category: string | null;
   priceRange: string | null;
   setCategory: (category: string | null) => void;
   setPriceRange: (priceRange: string | null) => void;
-  setSortOrder: (sortOrder: SortOrder) => void;
+
   clearFilters: () => void;
 }
 
@@ -40,6 +48,7 @@ export function FilterStoreProvider({ children }: FilterStoreProviderProps) {
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
   const [openSortMenu, setOpenSortMenu] = useState(false);
   const [openFilterMenu, setOpenFilterMenu] = useState(false);
+  const [sortBy, setSortBy] = useState<SortBy>('name');
 
   const clearFilters = () => {
     setCategory(null);
@@ -64,6 +73,10 @@ export function FilterStoreProvider({ children }: FilterStoreProviderProps) {
     // filter menu state controller
     openFilterMenu,
     setOpenFilterMenu,
+
+    // sort by state controller
+    sortBy,
+    setSortBy,
   };
 
   return (
