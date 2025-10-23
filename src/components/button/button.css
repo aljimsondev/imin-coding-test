@@ -8,6 +8,7 @@
   transition: 300ms;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--gap);
 }
 
@@ -45,6 +46,12 @@
   &:hover {
     opacity: 0.9;
   }
+}
+
+.button-ghost {
+  background: var(--muted-foreground);
+  color: var(--text-primary);
+  border: 1px solid var(--border-foreground);
 }
 
 /* SIZES */

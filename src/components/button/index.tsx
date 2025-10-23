@@ -9,6 +9,7 @@ const buttonVariants = cva('button', {
       outline: 'button-outline',
       secondary: 'button-secondary',
       'outline-destructive': 'button-outline-destructive',
+      ghost: 'button-ghost',
     },
     size: {
       default: 'button-default',
@@ -30,7 +31,7 @@ function Button({
 }: React.ComponentProps<'button'> & VariantProps<typeof buttonVariants> & {}) {
   return (
     <button
-      className={buttonVariants({ size, variant, className })}
+      className={buttonVariants({ className, size, variant })}
       {...rest}
     />
   );

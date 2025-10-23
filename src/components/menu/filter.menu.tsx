@@ -1,16 +1,14 @@
 import ColorSelector from '@/components/button/color-sector';
 import IconButton from '@/components/button/icon.button';
-import Input from '@/components/input/input';
+import PriceFilter from '@/components/filters/price-filter';
+import SizeFilter from '@/components/filters/size-filter';
 import Radio from '@/components/input/radio';
-import RangeSlider from '@/components/input/range';
 import { ListGroup } from '@/components/list';
 import { Portal } from '@/components/modal/portal';
 import Separator from '@/components/separator';
 import Typography from '@/components/typography';
 import { braTypeFilters, colorFilters } from '@/constants/filter';
-import { currencyFormatter } from '@/lib/utils/currency-formatter';
 import { useFilterStore } from '@/store/filter.store';
-import { ChangeEvent, useState } from 'react';
 import { MdOutlineClose } from 'react-icons/md';
 import { VscSettings } from 'react-icons/vsc';
 import './filter.menu.css';
@@ -62,15 +60,7 @@ function FilterMenu() {
             </div>
           </ListGroup>
           <ListGroup title="Size">
-            <div className="flex items-center justify-evenly">
-              {colorFilters.map((filter) => (
-                <ColorSelector
-                  color={filter.color}
-                  key={filter.id}
-                  value="#DFDBD8"
-                />
-              ))}
-            </div>
+            <SizeFilter />
           </ListGroup>
         </div>
       </aside>
@@ -79,48 +69,3 @@ function FilterMenu() {
 }
 
 export default FilterMenu;
-
-// filter price component
-interface PriceFilterProps {
-  maxPriceRange: number;
-  minPriceRange: number;
-}
-function PriceFilter({ maxPriceRange, minPriceRange }: PriceFilterProps) {
-  const [startValue, setStartValue] = useState(minPriceRange);
-  const [endValue, setEndValue] = useState(maxPriceRange);
-
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    // handle input change here
-  };
-
-  return (
-    <div>
-      <div className="flex items-center">
-        <Input
-          value={currencyFormatter(startValue)}
-          onChange={handleInputChange}
-        />
-        <div />
-        <Input
-          value={currencyFormatter(endValue)}
-          onChange={handleInputChange}
-        />
-      </div>
-      <RangeSlider
-        max={maxPriceRange}
-        min={minPriceRange}
-        onMaxValueChange={(val) => setEndValue(val)}
-        onMinValueChange={(val) => setStartValue(val)}
-      />
-
-      <div className="flex items-center">
-        <Typography variant="small" className="text-muted">
-          Price:{' '}
-          <strong className="text-muted font-bold text-primary">
-            {currencyFormatter(startValue)} - {currencyFormatter(endValue)}
-          </strong>
-        </Typography>
-      </div>
-    </div>
-  );
-}

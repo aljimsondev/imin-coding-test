@@ -1,0 +1,10 @@
+.size-filter-wrapper {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+
+  & button {
+    padding: 24px;
+  }
+}

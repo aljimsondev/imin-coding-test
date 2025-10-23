@@ -9,8 +9,9 @@
   --primary: #000000;
   --secondary: #d9d9d9;
   --muted: #bababa;
-  --muted-foreground: #f0f0f0;
+  --muted-foreground: #f9f9f9;
   --border: #d0d5dd;
+  --border-foreground: #e6e7e7;
   --card: #ffffff;
 
   /*ACCENT COLORS*/

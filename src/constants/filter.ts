@@ -55,3 +55,30 @@ export const colorFilters = [
     id: 8,
   },
 ];
+
+export const sizeFilters = [
+  {
+    size: 'XS(30A/B/C)',
+    id: 1,
+  },
+  {
+    size: 'S(32A/B/C)',
+    id: 2,
+  },
+  {
+    size: 'M(34A/B/C)',
+    id: 3,
+  },
+  {
+    size: 'L(36A/B/C)',
+    id: 4,
+  },
+  {
+    size: 'XL(38A/B/C)',
+    id: 5,
+  },
+  {
+    size: 'XXL(40A/B/C)',
+    id: 6,
+  },
+];
