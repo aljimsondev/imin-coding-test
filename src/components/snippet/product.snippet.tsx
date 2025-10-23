@@ -2,9 +2,9 @@
 
 import Button from '@/components/button';
 import ProductCard from '@/components/card/product.card';
+import SortingMenu from '@/components/menu/sorting.menu';
 import Typography from '@/components/typography';
 import products from '@/temp/products.json';
-import { IoChevronDown } from 'react-icons/io5';
 import { VscSettings } from 'react-icons/vsc';
 import './product.snippet.css';
 
@@ -31,9 +31,7 @@ function ProductSnippet() {
             <VscSettings className="text- " />
             Filter
           </Button>
-          <Button variant="outline">
-            <IoChevronDown /> Sort By
-          </Button>
+          <SortingMenu />
         </div>
       </div>
       <div className="products-wrapper">
