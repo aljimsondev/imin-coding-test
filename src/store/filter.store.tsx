@@ -1,9 +1,18 @@
 'use client';
 
 import { SortOrder } from '@/types/product.type';
-import { createContext, ReactNode, useContext, useState } from 'react';
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useContext,
+  useState,
+} from 'react';
 
 interface FilterStoreState {
+  openSortMenu: boolean;
+  setOpenSortMenu: Dispatch<SetStateAction<boolean>>;
   sortBy: string | null;
   sortOrder: SortOrder;
   category: string | null;
@@ -11,6 +20,7 @@ interface FilterStoreState {
   setSortBy: (sortBy: string | null) => void;
   setCategory: (category: string | null) => void;
   setPriceRange: (priceRange: string | null) => void;
+  setSortOrder: (sortOrder: SortOrder) => void;
   clearFilters: () => void;
 }
 
@@ -27,6 +37,7 @@ export function FilterStoreProvider({ children }: FilterStoreProviderProps) {
   const [category, setCategory] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
+  const [openSortMenu, setOpenSortMenu] = useState(false);
 
   const clearFilters = () => {
     setSortBy(null);
@@ -43,7 +54,11 @@ export function FilterStoreProvider({ children }: FilterStoreProviderProps) {
     sortOrder,
     setCategory,
     setPriceRange,
+    setSortOrder,
     clearFilters,
+    // menu state controller
+    openSortMenu,
+    setOpenSortMenu,
   };
 
   return (

@@ -6,13 +6,20 @@ import {
   DropdownSection,
 } from '@/components/dropdown';
 import { useFilterStore } from '@/store/filter.store';
+import { SortOrder } from '@/types/product.type';
 import { IoChevronDown } from 'react-icons/io5';
 
 function SortingMenu() {
-  const {} = useFilterStore();
+  const { setSortOrder, openSortMenu, setOpenSortMenu } = useFilterStore();
 
+  // update sort order
+  const handleNameSortOrder = (sortOrder: SortOrder) => {
+    setSortOrder(sortOrder);
+  };
   return (
     <Dropdown
+      open={openSortMenu}
+      onOpenChange={setOpenSortMenu}
       align="right"
       trigger={
         <Button variant="outline">
@@ -21,24 +28,18 @@ function SortingMenu() {
       }
     >
       <DropdownSection title="Alphabetically">
-        <DropdownItem onClick={() => setSelectedFilter('Electronics')}>
+        <DropdownItem onClick={() => handleNameSortOrder('asc')}>
           A-Z
         </DropdownItem>
-        <DropdownItem onClick={() => setSelectedFilter('Clothing')}>
+        <DropdownItem onClick={() => handleNameSortOrder('desc')}>
           Z-A
         </DropdownItem>
       </DropdownSection>
       <DropdownDivider />
       <DropdownSection title="Price Range">
-        <DropdownItem onClick={() => setSelectedFilter('Under $50')}>
-          Under $50
-        </DropdownItem>
-        <DropdownItem onClick={() => setSelectedFilter('$50 - $100')}>
-          $50 - $100
-        </DropdownItem>
-        <DropdownItem onClick={() => setSelectedFilter('Over $100')}>
-          Over $100
-        </DropdownItem>
+        <DropdownItem onClick={() => {}}>Under $50</DropdownItem>
+        <DropdownItem onClick={() => {}}>$50 - $100</DropdownItem>
+        <DropdownItem onClick={() => {}}>Over $100</DropdownItem>
       </DropdownSection>
     </Dropdown>
   );

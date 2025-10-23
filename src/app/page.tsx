@@ -1,16 +1,16 @@
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import ProductSnippet from '@/components/snippet/product.snippet';
-import AppProvider from '@/store';
+import AppStoreProvider from '@/store';
 
 export default function Home() {
   return (
     <main className="main">
-      <AppProvider>
+      <AppStoreProvider>
         <Header />
         <ProductSnippet />
         <Footer />
-      </AppProvider>
+      </AppStoreProvider>
     </main>
   );
 }
