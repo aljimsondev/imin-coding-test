@@ -1,5 +1,5 @@
 function ProductSnippet() {
-  return <div>ProductSnippet</div>;
+  return <section className="container">ProductSnippet</section>;
 }
 
 export default ProductSnippet;
