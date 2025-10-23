@@ -13,6 +13,10 @@ import {
 interface FilterStoreState {
   openSortMenu: boolean;
   setOpenSortMenu: Dispatch<SetStateAction<boolean>>;
+  // filter menu state
+  openFilterMenu: boolean;
+  setOpenFilterMenu: Dispatch<SetStateAction<boolean>>;
+
   sortBy: string | null;
   sortOrder: SortOrder;
   category: string | null;
@@ -38,6 +42,7 @@ export function FilterStoreProvider({ children }: FilterStoreProviderProps) {
   const [priceRange, setPriceRange] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
   const [openSortMenu, setOpenSortMenu] = useState(false);
+  const [openFilterMenu, setOpenFilterMenu] = useState(false);
 
   const clearFilters = () => {
     setSortBy(null);
@@ -55,10 +60,16 @@ export function FilterStoreProvider({ children }: FilterStoreProviderProps) {
     setCategory,
     setPriceRange,
     setSortOrder,
+    // reset filter handler
     clearFilters,
+
     // menu state controller
     openSortMenu,
     setOpenSortMenu,
+
+    // filter menu state controller
+    openFilterMenu,
+    setOpenFilterMenu,
   };
 
   return (
