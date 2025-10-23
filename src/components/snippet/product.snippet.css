@@ -1,4 +1,5 @@
 .snippet {
+  --padding: 0 16px;
   position: relative;
   padding: 3rem 0;
 
@@ -8,6 +9,7 @@
     position: relative;
     align-self: end;
     justify-content: space-between;
+    padding: var(--padding);
 
     & .title-wrapper {
       width: fit-content;
@@ -31,6 +33,7 @@
     grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
     gap: var(--product-spacing);
     margin-top: 2em;
+    padding: var(--padding);
   }
 }
 
@@ -42,6 +45,10 @@
   .snippet .snippet-header .filter {
     align-items: center;
     justify-content: center;
+  }
+
+  .snippet {
+    --padding: 0 8px;
   }
 }
 

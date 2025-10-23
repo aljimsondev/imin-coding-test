@@ -101,3 +101,9 @@ a {
     color-scheme: dark;
   }
 }
+
+@media (max-width: 540px) {
+  :root {
+    --product-spacing: 0.5rem;
+  }
+}
