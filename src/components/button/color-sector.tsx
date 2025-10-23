@@ -7,6 +7,7 @@ const colorSelectVariant = cva('', {
     size: {
       default: 'selector-base',
       sm: 'selector-sm',
+      xs: 'selector-xs',
       lg: 'selector-lg',
     },
   },
@@ -26,7 +27,7 @@ function ColorSelector({
     color: string;
   }) {
   const active = value === color;
-  console.log(color);
+
   return (
     <div
       className={cn('color-selector-wrapper', active ? 'active-selector' : '')}

@@ -9,7 +9,9 @@ import cn from 'classnames';
 import Image from 'next/image';
 import './product.card.css';
 
+import ColorSelector from '@/components/button/color-sector';
 import { Product } from '@/types/product.type';
+import { useCallback, useState } from 'react';
 import { FiPlus } from 'react-icons/fi';
 import { GoHeart } from 'react-icons/go';
 import { RiStackLine } from 'react-icons/ri';
@@ -19,12 +21,14 @@ interface ProductProps {
 }
 
 function ProductCard({ product }: ProductProps) {
+  const [selectedColor, setSelectedColor] = useState('');
   const stocks = countProducStocks(product.skus);
 
   const hasSales = Boolean(product.product_compare_at_price);
   const isNew = product.product_label.new;
   const isLimited = product.product_label.limited_edition;
   const isOutOfStocks = stocks <= 0;
+  const colors = product.skus.map((product) => product.sku_variant_colour);
 
   // calculate discount if theres a sales
   const discount = hasSales
@@ -35,6 +39,11 @@ function ProductCard({ product }: ProductProps) {
     : 0;
 
   const hasDiscount = discount > 0;
+
+  const onSelectColor = useCallback((color: string) => {
+    setSelectedColor(color);
+    // todo handle the rest of the logic here
+  }, []);
 
   return (
     <div className="product-card">
@@ -48,10 +57,23 @@ function ProductCard({ product }: ProductProps) {
       </div>
       <div className="product-content">
         <Typography variant="h5">{product.product_name}</Typography>
-        <div>
-          <Typography variant="small" className="text-muted">
-            {constructProductColorsAvailable(product.skus)}
-          </Typography>
+        <div className="product-colors-group-wrapper">
+          <div className="product-colours-names">
+            <Typography variant="small" className="text-muted">
+              {constructProductColorsAvailable(product.skus)}
+            </Typography>
+          </div>
+          <div className="product-colours-selection">
+            {colors.map((color, index) => (
+              <ColorSelector
+                color={color}
+                key={`color-${index}`}
+                size="xs"
+                value={selectedColor || colors[0]} // mark the first color as default selected
+                onClick={() => onSelectColor(color)}
+              />
+            ))}
+          </div>
         </div>
         <div className="price-wrapper ">
           <div className="prices">

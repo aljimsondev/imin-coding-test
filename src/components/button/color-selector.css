@@ -30,6 +30,9 @@
 .color-selector-active {
   border: 1px solid var(--primary);
 }
+.selector-xs {
+  height: 18px;
+}
 
 .selector-base {
   height: 32px;

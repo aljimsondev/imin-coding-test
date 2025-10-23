@@ -32,6 +32,21 @@
     gap: var(--gap);
     margin-top: 0.75em;
 
+    & .product-colors-group-wrapper {
+      height: 26px;
+      display: flex;
+      align-items: center;
+    }
+
+    & .product-colours-names {
+      display: block;
+    }
+
+    & .product-colours-selection {
+      display: none;
+      flex-direction: row;
+    }
+
     & .price-wrapper {
       display: flex;
       align-items: center;
@@ -57,5 +72,14 @@
       align-items: center;
       gap: var(--gap);
     }
+  }
+
+  /* SHOW THE COLOURS SELECTION WHEN THE CARD IS HOVERED*/
+  &:hover .product-content .product-colours-selection {
+    display: flex;
+  }
+  /* HIDE THE COLOUR NAMES WHEN THE CARD IS HOVERED*/
+  &:hover .product-content .product-colours-names {
+    display: none;
   }
 }
