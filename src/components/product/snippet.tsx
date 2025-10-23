@@ -1,10 +1,12 @@
 'use client';
 
+import Button from '@/components/button';
 import ProductCard from '@/components/product/card/product.card';
 import Typography from '@/components/typography';
 import products from '@/temp/products.json';
+import { IoChevronDown } from 'react-icons/io5';
+import { VscSettings } from 'react-icons/vsc';
 import './snippet.css';
-
 function getProducts() {
   return products;
 }
@@ -14,13 +16,30 @@ function ProductSnippet() {
 
   return (
     <section className="snippet container ">
-      <div>
-        <Typography component="h3" variant="h3" className="uppercase">
-          Product
-        </Typography>
-        <Typography variant="p" className="text-muted">
-          Showing search results for &apos;Bra&apos;(88)
-        </Typography>
+      <div className="header">
+        <div className="title-wrapper">
+          <Typography component="h3" variant="h2" className="uppercase">
+            Product
+          </Typography>
+          <Typography variant="p" className="text-muted">
+            Showing search results for &apos;Bra&apos;(88)
+          </Typography>
+        </div>
+        <div className="filter">
+          <Button variant="outline">
+            <VscSettings className="text- " />
+            Filter
+          </Button>
+          <Button variant="outline">
+            <IoChevronDown /> Sort By
+          </Button>
+          <Button variant="destructive">
+            <IoChevronDown /> Sort By
+          </Button>
+          <Button variant="default">
+            <IoChevronDown /> Sort By
+          </Button>
+        </div>
       </div>
       <div className="products-wrapper">
         {products.map((product) => (

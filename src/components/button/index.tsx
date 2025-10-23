@@ -1,19 +1,19 @@
 import { cva, VariantProps } from 'class-variance-authority';
+import './button.css';
 
-const buttonVariants = cva('', {
+const buttonVariants = cva('button', {
   variants: {
     variant: {
-      default: '',
-      destructive: '',
-      outline: '',
-      secondary: '',
-      ghost: '',
-      link: '',
+      default: 'button-primary',
+      destructive: 'button-destructive',
+      outline: 'button-outline',
+      secondary: 'button-secondary',
+      'outline-destructive': 'button-outline-destructive',
     },
     size: {
-      default: '',
-      sm: '',
-      lg: '',
+      default: 'button-default',
+      sm: 'button-sm',
+      lg: 'button-lg',
     },
   },
   defaultVariants: {
