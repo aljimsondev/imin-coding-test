@@ -1,5 +1,5 @@
 import Badge from '@/components/badge';
-import Icon from '@/components/button/icon';
+import IconButton from '@/components/button/icon.button';
 import Typography from '@/components/typography';
 import { computeSalesPercentage } from '@/lib/utils/compute-sales-percentage';
 import { constructProductColorsAvailable } from '@/lib/utils/construct-product-colors';
@@ -9,6 +9,9 @@ import { Product } from '@/temp/products';
 import cn from 'classnames';
 import Image from 'next/image';
 import './product.card.css';
+
+import { GoHeart } from 'react-icons/go';
+import { RiStackLine } from 'react-icons/ri';
 
 interface ProductProps {
   product: Product;
@@ -59,8 +62,16 @@ function ProductCard({ product }: ProductProps) {
             )}
           </div>
           <div className="icons">
-            <Icon imageSrc="/assets/icons/heart.png" />
-            <Icon imageSrc="/assets/icons/stack.png" />
+            <IconButton
+              icon={GoHeart}
+              iconProps={{ size: 24 }}
+              variant="accent-red"
+            />
+            <IconButton
+              icon={RiStackLine}
+              iconProps={{ size: 24 }}
+              variant="accent-red"
+            />
           </div>
         </div>
         <div className="card-footer">
