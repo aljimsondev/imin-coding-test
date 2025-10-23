@@ -5,8 +5,10 @@ import {
   DropdownItem,
   DropdownSection,
 } from '@/components/dropdown';
+import { useClickOutside } from '@/lib/hooks/use-click-outside';
 import { useFilterStore } from '@/store/filter.store';
 import { SortBy, SortOrder } from '@/types/product.type';
+import { useRef } from 'react';
 import { IoChevronDown } from 'react-icons/io5';
 import { MdOutlineCheck } from 'react-icons/md';
 
@@ -19,6 +21,10 @@ function SortingMenu() {
     sortBy,
     sortOrder,
   } = useFilterStore();
+  const ref = useRef<HTMLDivElement>(null);
+
+  // closes the dropdown when user click outside
+  useClickOutside(ref, () => setOpenSortMenu(false));
 
   // update sort order
   const handleNameSortOrder = (sortBy: SortBy, sortOrder: SortOrder) => {
@@ -46,35 +52,37 @@ function SortingMenu() {
         </Button>
       }
     >
-      <DropdownSection title="Alphabetically">
-        <DropdownItem
-          className="flex items-center justify-between"
-          onClick={() => handleNameSortOrder('name', 'asc')}
-        >
-          A-Z {nameAscendingOrder && <MdOutlineCheck size={24} />}
-        </DropdownItem>
-        <DropdownItem
-          className="flex items-center justify-between"
-          onClick={() => handleNameSortOrder('name', 'desc')}
-        >
-          Z-A {nameDescendingOrder && <MdOutlineCheck size={24} />}
-        </DropdownItem>
-      </DropdownSection>
-      <DropdownDivider />
-      <DropdownSection title="Price Range">
-        <DropdownItem
-          className="flex items-center justify-between"
-          onClick={() => handleNameSortOrder('price', 'asc')}
-        >
-          Low to High {priceAscendingOrder && <MdOutlineCheck size={24} />}
-        </DropdownItem>
-        <DropdownItem
-          className="flex items-center justify-between"
-          onClick={() => handleNameSortOrder('price', 'desc')}
-        >
-          High to Low {priceDescendingOrder && <MdOutlineCheck size={24} />}
-        </DropdownItem>
-      </DropdownSection>
+      <div ref={ref}>
+        <DropdownSection title="Alphabetically">
+          <DropdownItem
+            className="flex items-center justify-between"
+            onClick={() => handleNameSortOrder('name', 'asc')}
+          >
+            A-Z {nameAscendingOrder && <MdOutlineCheck size={24} />}
+          </DropdownItem>
+          <DropdownItem
+            className="flex items-center justify-between"
+            onClick={() => handleNameSortOrder('name', 'desc')}
+          >
+            Z-A {nameDescendingOrder && <MdOutlineCheck size={24} />}
+          </DropdownItem>
+        </DropdownSection>
+        <DropdownDivider />
+        <DropdownSection title="Price Range">
+          <DropdownItem
+            className="flex items-center justify-between"
+            onClick={() => handleNameSortOrder('price', 'asc')}
+          >
+            Low to High {priceAscendingOrder && <MdOutlineCheck size={24} />}
+          </DropdownItem>
+          <DropdownItem
+            className="flex items-center justify-between"
+            onClick={() => handleNameSortOrder('price', 'desc')}
+          >
+            High to Low {priceDescendingOrder && <MdOutlineCheck size={24} />}
+          </DropdownItem>
+        </DropdownSection>
+      </div>
     </Dropdown>
   );
 }
