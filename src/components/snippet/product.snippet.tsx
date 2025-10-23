@@ -1,19 +1,21 @@
 'use client';
 
+import { getProducts } from '@/_actions/get-products.action';
 import Button from '@/components/button';
 import ProductCard from '@/components/card/product.card';
 import SortingMenu from '@/components/menu/sorting.menu';
 import Typography from '@/components/typography';
-import products from '@/temp/products.json';
+import { useFilterStore } from '@/store/filter.store';
+import { useQuery } from '@tanstack/react-query';
 import { VscSettings } from 'react-icons/vsc';
 import './product.snippet.css';
 
-function getProducts() {
-  return products;
-}
-
 function ProductSnippet() {
-  const products = getProducts();
+  const { sortOrder } = useFilterStore();
+  const { data: products = [] } = useQuery({
+    queryFn: () => getProducts({ sortOrder: sortOrder }),
+    queryKey: [sortOrder],
+  });
 
   return (
     <section className="snippet container ">
