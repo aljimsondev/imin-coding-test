@@ -1,0 +1,547 @@
+[
+  {
+    "product_id": 1001,
+    "product_name": "Premium Mid-Rise Seamless Butthugger",
+    "product_retail_price": 39.9,
+    "product_compare_at_price": null,
+    "product_img": "product1.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10010001,
+        "sku_variant_colour": "Red",
+        "sku_variant_qty": 23
+      },
+      {
+        "sku_id": 10010002,
+        "sku_variant_colour": "Blue",
+        "sku_variant_qty": 45
+      },
+      {
+        "sku_id": 10010003,
+        "sku_variant_colour": "Green",
+        "sku_variant_qty": 65
+      },
+      {
+        "sku_id": 10010004,
+        "sku_variant_colour": "Yellow",
+        "sku_variant_qty": 21
+      }
+    ]
+  },
+  {
+    "product_id": 1002,
+    "product_name": "Forme+ V-plunge Wireless Seamless Bra (Machine Wash Edition)",
+    "product_retail_price": 42.9,
+    "product_compare_at_price": null,
+    "product_img": "product2.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10020001,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 45
+      },
+      {
+        "sku_id": 10020002,
+        "sku_variant_colour": "Orange",
+        "sku_variant_qty": 23
+      },
+      {
+        "sku_id": 10020003,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 56
+      },
+      {
+        "sku_id": 10020004,
+        "sku_variant_colour": "Grey",
+        "sku_variant_qty": 6
+      }
+    ]
+  },
+  {
+    "product_id": 1003,
+    "product_name": "AIR-SHAPER Super High-Rise Seamless Cheekie (Gentle Compression)",
+    "product_retail_price": 35.49,
+    "product_compare_at_price": 39.9,
+    "product_img": "product3.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10030001,
+        "sku_variant_colour": "Nude",
+        "sku_variant_qty": 6
+      },
+      {
+        "sku_id": 10030002,
+        "sku_variant_colour": "Red",
+        "sku_variant_qty": 12
+      }
+    ]
+  },
+  {
+    "product_id": 1004,
+    "product_name": "365 Diamond! Anti-Slip Seamless Strapless Push Up Wireless Bra",
+    "product_retail_price": 42.9,
+    "product_compare_at_price": null,
+    "product_img": "product4.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10040001,
+        "sku_variant_colour": "Nude",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10040002,
+        "sku_variant_colour": "Brown",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10040003,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 0
+      }
+    ]
+  },
+  {
+    "product_id": 1005,
+    "product_name": "Air-Leisure! Scoop-Neck Lightly-lined Seamless Wireless Bra (Contour-fit Edition)",
+    "product_retail_price": 42.9,
+    "product_compare_at_price": null,
+    "product_img": "product5.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10050001,
+        "sku_variant_colour": "Purple",
+        "sku_variant_qty": 43
+      },
+      {
+        "sku_id": 10050002,
+        "sku_variant_colour": "Orange",
+        "sku_variant_qty": 12
+      },
+      {
+        "sku_id": 10050003,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 9
+      },
+      {
+        "sku_id": 10050004,
+        "sku_variant_colour": "Grey",
+        "sku_variant_qty": 1
+      }
+    ]
+  },
+  {
+    "product_id": 1006,
+    "product_name": "Air-ee Seamless Bra - Thick Straps (Signature Edition)",
+    "product_retail_price": 42.9,
+    "product_compare_at_price": null,
+    "product_img": "product6.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10060001,
+        "sku_variant_colour": "Nude",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10060002,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10060003,
+        "sku_variant_colour": "Green",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10060004,
+        "sku_variant_colour": "Yellow",
+        "sku_variant_qty": 0
+      }
+    ]
+  },
+  {
+    "product_id": 1007,
+    "product_name": "air-ee V-Neck Seamless Pullover Bra (Signature Edition)",
+    "product_retail_price": 42.9,
+    "product_compare_at_price": null,
+    "product_img": "product7.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10070001,
+        "sku_variant_colour": "Blue",
+        "sku_variant_qty": 22
+      },
+      {
+        "sku_id": 10070002,
+        "sku_variant_colour": "Green",
+        "sku_variant_qty": 43
+      },
+      {
+        "sku_id": 10070003,
+        "sku_variant_colour": "Yellow",
+        "sku_variant_qty": 21
+      },
+      {
+        "sku_id": 10070004,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 12
+      }
+    ]
+  },
+  {
+    "product_id": 1008,
+    "product_name": "Contour Lift! Seamless Push Up Wireless Bra",
+    "product_retail_price": 39.9,
+    "product_compare_at_price": null,
+    "product_img": "product8.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10080001,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 88
+      },
+      {
+        "sku_id": 10080002,
+        "sku_variant_colour": "Purple",
+        "sku_variant_qty": 78
+      },
+      {
+        "sku_id": 10080003,
+        "sku_variant_colour": "Orange",
+        "sku_variant_qty": 34
+      },
+      {
+        "sku_id": 10080004,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 55
+      }
+    ]
+  },
+  {
+    "product_id": 1009,
+    "product_name": "Full Scoop! Seamless Push Up Anti-slip Strapless Wireless Bra",
+    "product_retail_price": 39.9,
+    "product_compare_at_price": null,
+    "product_img": "product9.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10090001,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 89
+      },
+      {
+        "sku_id": 10090002,
+        "sku_variant_colour": "Purple",
+        "sku_variant_qty": 86
+      },
+      {
+        "sku_id": 10090003,
+        "sku_variant_colour": "Orange",
+        "sku_variant_qty": 45
+      },
+      {
+        "sku_id": 10090004,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 23
+      }
+    ]
+  },
+  {
+    "product_id": 1010,
+    "product_name": "5th Gen 100% Non-Slip Strapless Wireless Bra",
+    "product_retail_price": 39.9,
+    "product_compare_at_price": null,
+    "product_img": "product10.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10100001,
+        "sku_variant_colour": "Yellow",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10100002,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10100003,
+        "sku_variant_colour": "Purple",
+        "sku_variant_qty": 0
+      }
+    ]
+  },
+  {
+    "product_id": 1011,
+    "product_name": "Oomph! Everyday Boost Seamless Push Up Wireless Bra",
+    "product_retail_price": 42.9,
+    "product_compare_at_price": null,
+    "product_img": "product11.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10110001,
+        "sku_variant_colour": "Red",
+        "sku_variant_qty": 12
+      },
+      {
+        "sku_id": 10110002,
+        "sku_variant_colour": "Blue",
+        "sku_variant_qty": 45
+      },
+      {
+        "sku_id": 10110003,
+        "sku_variant_colour": "Green",
+        "sku_variant_qty": 67
+      }
+    ]
+  },
+  {
+    "product_id": 1012,
+    "product_name": "Invisible Curve! Deep U-Plunge Lightly-lined Wireless Bra",
+    "product_retail_price": 35.49,
+    "product_compare_at_price": 39.9,
+    "product_img": "product12.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10120001,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 3
+      },
+      {
+        "sku_id": 10120002,
+        "sku_variant_colour": "Orange",
+        "sku_variant_qty": 43
+      },
+      {
+        "sku_id": 10120003,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 2
+      },
+      {
+        "sku_id": 10120004,
+        "sku_variant_colour": "Grey",
+        "sku_variant_qty": 1
+      }
+    ]
+  },
+  {
+    "product_id": 1013,
+    "product_name": "Luxurious Cooling Crease-Less Satin Shorts",
+    "product_retail_price": 13.45,
+    "product_compare_at_price": 26.9,
+    "product_img": "product13.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10130001,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10130002,
+        "sku_variant_colour": "Purple",
+        "sku_variant_qty": 0
+      },
+      {
+        "sku_id": 10130003,
+        "sku_variant_colour": "Orange",
+        "sku_variant_qty": 0
+      }
+    ]
+  },
+  {
+    "product_id": 1014,
+    "product_name": "Everyday Bra-Less Modal® Fabric Camisole Bra Top",
+    "product_retail_price": 26.9,
+    "product_compare_at_price": null,
+    "product_img": "product14.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10140001,
+        "sku_variant_colour": "Green",
+        "sku_variant_qty": 23
+      },
+      {
+        "sku_id": 10140002,
+        "sku_variant_colour": "Yellow",
+        "sku_variant_qty": 12
+      }
+    ]
+  },
+  {
+    "product_id": 1015,
+    "product_name": "Air-Ee Everyfit U-Back Seamless Bodysuit (Signature Edition)",
+    "product_retail_price": 41.31,
+    "product_compare_at_price": 45.9,
+    "product_img": "product15.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10150001,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 67
+      }
+    ]
+  },
+  {
+    "product_id": 1016,
+    "product_name": "Air-Ee Bare-Back Seamless Bodysuit (Signature Edition)",
+    "product_retail_price": 41.31,
+    "product_compare_at_price": 45.9,
+    "product_img": "product16.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10160001,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 90
+      }
+    ]
+  },
+  {
+    "product_id": 1017,
+    "product_name": "Heathug! Thermal 2-In-1 Long Sleeve With In-Built Bra Top",
+    "product_retail_price": 39.9,
+    "product_compare_at_price": null,
+    "product_img": "product17.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10170001,
+        "sku_variant_colour": "Pink",
+        "sku_variant_qty": 34
+      },
+      {
+        "sku_id": 10170002,
+        "sku_variant_colour": "Purple",
+        "sku_variant_qty": 34
+      }
+    ]
+  },
+  {
+    "product_id": 1018,
+    "product_name": "Heathug! Thermal 2-In-1 Sleeveless With In-Built Bra Top",
+    "product_retail_price": 29.9,
+    "product_compare_at_price": null,
+    "product_img": "product18.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10180001,
+        "sku_variant_colour": "Brown",
+        "sku_variant_qty": 56
+      },
+      {
+        "sku_id": 10180002,
+        "sku_variant_colour": "Nude",
+        "sku_variant_qty": 5
+      }
+    ]
+  },
+  {
+    "product_id": 1019,
+    "product_name": "Front-Clasps Stick On Bra",
+    "product_retail_price": 14.93,
+    "product_compare_at_price": 19.9,
+    "product_img": "product19.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10190001,
+        "sku_variant_colour": "Nude",
+        "sku_variant_qty": 32
+      },
+      {
+        "sku_id": 10190002,
+        "sku_variant_colour": "Black",
+        "sku_variant_qty": 6
+      }
+    ]
+  },
+  {
+    "product_id": 1020,
+    "product_name": "No-Camel-Toe Smoothguard Seamless Mid-Rise Cheekie",
+    "product_retail_price": 26.9,
+    "product_compare_at_price": null,
+    "product_img": "product20.jpg",
+    "product_label": {
+      "new": false,
+      "limited_edition": false
+    },
+    "skus": [
+      {
+        "sku_id": 10200001,
+        "sku_variant_colour": "Milk Tea",
+        "sku_variant_qty": 11
+      }
+    ]
+  }
+]
