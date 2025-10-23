@@ -1,22 +1,16 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 'use client';
 
-import {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useEffect,
-  useState,
-} from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 interface PortalProps {
   open: boolean;
-  onOpenChange: Dispatch<SetStateAction<boolean>>;
+
   children: ReactNode;
 }
 
-export function Portal({ onOpenChange, open, children }: PortalProps) {
+export function Portal({ open, children }: PortalProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -32,15 +26,12 @@ export function Portal({ onOpenChange, open, children }: PortalProps) {
     };
   }, [open, mounted]);
 
-  const toggleOpenState = () => onOpenChange((prev) => !prev);
-
   // Return null on server and before mounting
   if (!mounted || !open) return null;
 
   return createPortal(
     <div
       className="modal-overlay"
-      onClick={toggleOpenState}
       style={{
         position: 'fixed',
         top: 0,

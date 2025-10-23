@@ -3,7 +3,8 @@
   width: 400px;
   background: var(--background);
   height: 100dvh;
-  padding: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-header {
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 32px;
 }
 
 .filter-header-title {
@@ -21,8 +23,10 @@
 }
 
 .filter-menu-content {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: var(--gap-lg);
+  flex: 1;
+  overflow: auto;
+  padding: 16px 32px;
 }

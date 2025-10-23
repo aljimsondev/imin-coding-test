@@ -1,11 +1,11 @@
 import Button from '@/components/button';
-import { sizeFilters } from '@/constants/filter';
+import { ProductSizes } from '@/types/product.type';
 import './size-filter.css';
 
-function SizeFilter() {
+function SizeFilter({ options }: { options: ProductSizes }) {
   return (
     <div className="size-filter-wrapper">
-      {sizeFilters.map((filter) => {
+      {options.map((filter) => {
         return (
           <Button
             key={filter.id}

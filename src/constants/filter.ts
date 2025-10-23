@@ -1,4 +1,4 @@
-export const braTypeFilters = [
+export const braTypes = [
   {
     name: 'T-Shirt Bra',
     id: 1,
@@ -56,7 +56,7 @@ export const colorFilters = [
   },
 ];
 
-export const sizeFilters = [
+export const sizes = [
   {
     size: 'XS(30A/B/C)',
     id: 1,
@@ -80,5 +80,74 @@ export const sizeFilters = [
   {
     size: 'XXL(40A/B/C)',
     id: 6,
+  },
+];
+
+export const styles = [
+  {
+    style: '5th gen 100% non-slip',
+    id: 1,
+  },
+  {
+    style: '247 seamless 100% non-slip',
+    id: 2,
+  },
+  {
+    style: 'lift it up! v2.0 100% non-slip',
+    id: 3,
+  },
+  {
+    style: '365 seamless anti-slip',
+    id: 4,
+  },
+  {
+    style: '365 diamond anti-slip',
+    id: 5,
+  },
+];
+
+export const materials = [
+  {
+    material: 'Spandex',
+    id: 1,
+  },
+  {
+    material: 'Superfine Cotton',
+    id: 2,
+  },
+  {
+    material: 'Smooth fabric ',
+    id: 3,
+  },
+  {
+    material: 'Nylon',
+    id: 4,
+  },
+  {
+    material: 'Cotton',
+    id: 5,
+  },
+];
+
+export const productCare = [
+  {
+    product_care: 'Machine washable',
+    id: 1,
+  },
+  {
+    product_care: 'Non-machine washable',
+    id: 2,
+  },
+  {
+    product_care: 'Dry me right',
+    id: 3,
+  },
+  {
+    product_care: 'Hand wash always',
+    id: 4,
+  },
+  {
+    product_care: 'Keep the grip sticky',
+    id: 5,
   },
 ];

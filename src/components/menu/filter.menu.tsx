@@ -1,23 +1,39 @@
 import ColorSelector from '@/components/button/color-sector';
 import IconButton from '@/components/button/icon.button';
+import MaterialFilter from '@/components/filters/material-filter';
 import PriceFilter from '@/components/filters/price-filter';
+import ProductCareFilter from '@/components/filters/product-care-filter';
 import SizeFilter from '@/components/filters/size-filter';
-import Radio from '@/components/input/radio';
+import StyleFilter from '@/components/filters/style-filter';
+import TypeFilter from '@/components/filters/type-filter';
 import { ListGroup } from '@/components/list';
 import { Portal } from '@/components/modal/portal';
 import Separator from '@/components/separator';
 import Typography from '@/components/typography';
-import { braTypeFilters, colorFilters } from '@/constants/filter';
+import {
+  braTypes,
+  colorFilters,
+  materials,
+  productCare,
+  sizes,
+  styles,
+} from '@/constants/filter';
+import { useClickOutside } from '@/lib/hooks/use-click-outside';
 import { useFilterStore } from '@/store/filter.store';
+import { useRef } from 'react';
 import { MdOutlineClose } from 'react-icons/md';
 import { VscSettings } from 'react-icons/vsc';
 import './filter.menu.css';
 
 function FilterMenu() {
   const { openFilterMenu, setOpenFilterMenu } = useFilterStore();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useClickOutside(ref, () => setOpenFilterMenu(false));
+
   return (
-    <Portal open={true} onOpenChange={setOpenFilterMenu}>
-      <aside className="filter-container">
+    <Portal open={openFilterMenu}>
+      <aside className="filter-container" ref={ref}>
         <div className="filter-header">
           <div className="filter-header-title">
             <VscSettings size={20} />
@@ -34,16 +50,7 @@ function FilterMenu() {
         <Separator />
         <div className="filter-menu-content">
           <ListGroup title="Bra Type">
-            {braTypeFilters.map((type, index) => (
-              <Radio
-                name="bra_type"
-                id={type.name}
-                checked={index === 1}
-                label={type.name}
-                key={type.id}
-                onChange={() => {}} // manage check handler here
-              />
-            ))}
+            <TypeFilter options={braTypes} />
           </ListGroup>
           <ListGroup title="Price">
             <PriceFilter maxPriceRange={200000} minPriceRange={0} />
@@ -60,7 +67,16 @@ function FilterMenu() {
             </div>
           </ListGroup>
           <ListGroup title="Size">
-            <SizeFilter />
+            <SizeFilter options={sizes} />
+          </ListGroup>
+          <ListGroup title="Style">
+            <StyleFilter options={styles} />
+          </ListGroup>
+          <ListGroup title="Material">
+            <MaterialFilter options={materials} />
+          </ListGroup>
+          <ListGroup title="Product Care">
+            <ProductCareFilter options={productCare} />
           </ListGroup>
         </div>
       </aside>
