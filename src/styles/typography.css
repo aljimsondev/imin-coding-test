@@ -50,3 +50,30 @@
 .font-bold {
   font-weight: 700;
 }
+
+/* COLORS */
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-accent-red {
+  color: var(--accent-red);
+}
+
+.text-accent-blue {
+  color: var(--accent-blue);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+/*MISC*/
+
+.uppercase {
+  text-transform: uppercase;
+}

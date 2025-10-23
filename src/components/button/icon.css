@@ -1,0 +1,11 @@
+.icon {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  & .icon-img {
+    height: 18px;
+    /* width: 24px; */
+  }
+}

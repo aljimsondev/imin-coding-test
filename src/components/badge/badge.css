@@ -1,0 +1,32 @@
+.badge {
+  position: relative;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.badge-rose {
+  background: var(--accent-rose);
+  color: var(--text-primary);
+}
+
+.badge-red {
+  background: var(--accent-red);
+  color: var(--text-primary-foreground);
+}
+
+.badge-blue {
+  background: var(--accent-blue);
+  color: var(--text-primary-foreground);
+}
+
+.badge-primary {
+  background: var(--primary);
+  color: var(--text-primary-foreground);
+}
+
+.badge-secondary {
+  background: var(--muted);
+  color: var(--text-primary-foreground);
+}

@@ -1,4 +1,5 @@
 import { cva, VariantProps } from 'class-variance-authority';
+import cn from 'classnames';
 import React from 'react';
 
 const typographyVariant = cva('', {
@@ -12,6 +13,13 @@ const typographyVariant = cva('', {
       h5: 'text-lg font-medium',
       h6: 'text-base font-medium',
       small: 'text-sm',
+    },
+    color: {
+      primary: 'text-primary',
+      base: 'text-secondary',
+      muted: 'muted',
+      'accent-red': 'text-accent-red',
+      'accent-blue': 'text-accent-blue',
     },
   },
   defaultVariants: {
@@ -37,16 +45,20 @@ function Typography({
   className,
   variant,
   component = 'p',
+  color,
   ...rest
 }: React.ComponentProps<'button'> &
   VariantProps<typeof typographyVariant> & {
-    component: TypographyVariant;
+    component?: TypographyVariant;
   }) {
   // Use custom element if provided, otherwise use variant mapping
   const Comp = component as React.ElementType;
 
   return (
-    <Comp {...rest} className={typographyVariant({ variant, className })} />
+    <Comp
+      {...rest}
+      className={cn(typographyVariant({ variant, color, className }))}
+    />
   );
 }
 

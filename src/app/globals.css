@@ -7,6 +7,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #000000;
   --secondary: #d9d9d9;
   --muted: #bababa;
   --border: #d0d5dd;
@@ -16,9 +17,10 @@
   --accent-blue: #2779b4;
 
   /*TYPOGRAPHY*/
-  --text-muted: #495057;
-  --text-muted-foreground: #667085;
+  --text-secondary: #495057;
+  --text-muted: #667085;
   --text-primary: #000000;
+  --text-primary-foreground: #ffffff;
 
   /* SIZES */
   --text-sm: 0.875rem; /* 14px */
@@ -28,6 +30,13 @@
   --text-2xl: 1.5rem; /* 24px */
   --text-3xl: 1.875rem; /* 30px */
   --text-4xl: 2.25rem; /* 36px */
+
+  /* SPACING */
+  --product-spacing: 1rem;
+  --gap: 0.5rem;
+
+  /* RADIUS */
+  --border-radius: 4px;
 }
 
 @media (prefers-color-scheme: light) {

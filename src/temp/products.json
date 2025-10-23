@@ -6,7 +6,7 @@
     "product_compare_at_price": null,
     "product_img": "product1.jpg",
     "product_label": {
-      "new": false,
+      "new": true,
       "limited_edition": false
     },
     "skus": [
@@ -39,7 +39,7 @@
     "product_compare_at_price": null,
     "product_img": "product2.jpg",
     "product_label": {
-      "new": false,
+      "new": true,
       "limited_edition": false
     },
     "skus": [
@@ -73,7 +73,7 @@
     "product_img": "product3.jpg",
     "product_label": {
       "new": false,
-      "limited_edition": false
+      "limited_edition": true
     },
     "skus": [
       {
@@ -222,7 +222,7 @@
     "product_compare_at_price": null,
     "product_img": "product8.jpg",
     "product_label": {
-      "new": false,
+      "new": true,
       "limited_edition": false
     },
     "skus": [
@@ -255,7 +255,7 @@
     "product_compare_at_price": null,
     "product_img": "product9.jpg",
     "product_label": {
-      "new": false,
+      "new": true,
       "limited_edition": false
     },
     "skus": [
@@ -345,7 +345,7 @@
     "product_img": "product12.jpg",
     "product_label": {
       "new": false,
-      "limited_edition": false
+      "limited_edition": true
     },
     "skus": [
       {
