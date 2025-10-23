@@ -5,11 +5,11 @@ import { computeSalesPercentage } from '@/lib/utils/compute-sales-percentage';
 import { constructProductColorsAvailable } from '@/lib/utils/construct-product-colors';
 import { countProducStocks } from '@/lib/utils/countProductStocks';
 import { currencyFormatter } from '@/lib/utils/currency-formatter';
-import { Product } from '@/temp/products';
 import cn from 'classnames';
 import Image from 'next/image';
 import './product.card.css';
 
+import { Product } from '@/types/product.type';
 import { GoHeart } from 'react-icons/go';
 import { RiStackLine } from 'react-icons/ri';
 

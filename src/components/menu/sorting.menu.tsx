@@ -5,11 +5,12 @@ import {
   DropdownItem,
   DropdownSection,
 } from '@/components/dropdown';
-import { useState } from 'react';
+import { useFilterStore } from '@/store/filter.store';
 import { IoChevronDown } from 'react-icons/io5';
 
 function SortingMenu() {
-  const [selectedFilter, setSelectedFilter] = useState<string>('');
+  const {} = useFilterStore();
+
   return (
     <Dropdown
       align="right"
