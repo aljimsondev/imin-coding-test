@@ -3,6 +3,7 @@
 import { getProducts } from '@/_actions/get-products.action';
 import Button from '@/components/button';
 import ProductCard from '@/components/card/product.card';
+import FilterMenu from '@/components/menu/filter.menu';
 import SortingMenu from '@/components/menu/sorting.menu';
 import Typography from '@/components/typography';
 import { useFilterStore } from '@/store/filter.store';
@@ -33,6 +34,7 @@ function ProductSnippet() {
             <VscSettings className="text- " />
             Filter
           </Button>
+          <FilterMenu />
           <SortingMenu />
         </div>
       </div>

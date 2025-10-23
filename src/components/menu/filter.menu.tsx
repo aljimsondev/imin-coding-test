@@ -1,5 +1,13 @@
+import { Modal } from '@/components/modal';
+import { useState } from 'react';
+
 function FilterMenu() {
-  return <aside>FilterMenu</aside>;
+  const [open, setOpen] = useState(true);
+  return (
+    <Modal open={open} onOpenChange={setOpen}>
+      <aside>FilterMenu</aside>
+    </Modal>
+  );
 }
 
 export default FilterMenu;
