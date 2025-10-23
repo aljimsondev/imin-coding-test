@@ -49,7 +49,6 @@
       }
       & .icons {
         display: flex;
-        gap: var(--gap);
       }
     }
 
